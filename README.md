@@ -3,13 +3,14 @@ A Framer module to render JSON files exported with the Bodymovin plugin from Aft
 
 > *Bodymoving created by Hernan Torrisi and also used by AirBnb's Lottie library.*
 
+## [View Demo](https://framer.cloud/YwOqV/)
 
 ## Installation
 
 1. Create a new Framer project.
-2. Download the [bodymovin plugin](https://raw.githubusercontent.com/bodymovin/bodymovin/master/build/player/bodymovin_light.min.js) and add it to your project and index.html
+2. Download the [bodymovin plugin](https://raw.githubusercontent.com/bodymovin/bodymovin/master/build/player/bodymovin.min.js) and add it to your project and index.html
 ```html
-<script src="js/bodymovin_light.min.js" type="text/javascript"></script>
+<script src="js/bodymovin.min.js" type="text/javascript"></script>
 ```
 3. Put the file `BodymovinLayer.coffee` in your modules folder.
 4. Add this line at the top of your Framer document.
@@ -26,7 +27,7 @@ customAnim = new BodymovinLayer
 	name: "customAnim"
 	path: "images/animation.json"
 ```
-That's it! This creates an element bundled with all the benefits of a Framer Layer **and** the methods of a bodymoving animation instance.
+That's it! This creates an element bundled with all the goodies of a Framer Layer **and** the methods of a bodymovin animation instance.
 
 
 ### Customization
@@ -41,7 +42,7 @@ customAnim = new BodymovinLayer
 	direction: 1
 ```
 
-- `name` *String* **Required** : Sets the name of the instance.
+- `name` *String* **Required** : Sets the name of the instance. Each instance must have a different name.
 - `path` *String* **Required** : Sets the path to your JSON file.
 - `autoplay` *Boolean* : Whether or not to autoplay the animation once it's loaded. Defaults to true.
 - `loop` *Boolean or Number* : Whether or not to loop the animation. If you pass a number, the animation will loop that many times. Defaults to true.
@@ -72,8 +73,7 @@ customAnim.on "change:direction", ->
 	#Do something else
 ```
 
-
-## [View Demo](https://framer.cloud/GPSqX/)
+### [Basic Demo](https://framer.cloud/GPSqX/)
 
 Plays an animation, and changes its direction on Tap.
 
