@@ -1,7 +1,7 @@
 # Bodymovin for Framer
-A module to render JSON files exported with the Bodymovin plugin from After Effects.
+A Framer module to render JSON files exported with the Bodymovin plugin from After Effects.
 
-> Bodymoving created by Hernan Torrisi and also used by AirBnb's Lottie library.
+> *Bodymoving created by Hernan Torrisi and also used by AirBnb's Lottie library.*
 
 
 ## Installation
@@ -31,7 +31,6 @@ That's it! This creates an element bundled with all the benefits of a Framer Lay
 
 ### Customization
 
-A description of the attributes you can modify.
 ```coffeescript
 customAnim = new BodymovinLayer
 	name: "customAnim"
@@ -59,7 +58,7 @@ customAnim = new BodymovinLayer
 
 ### Events
 
-Listen for custom events.
+Examples of available custom events:
 
 ```coffeescript
 customAnim.on "change:speed", ->
@@ -111,6 +110,8 @@ Download bodymovin-ready animations.
 
 Learn more about Bodymovin.
 - [Bodymovin official repo](https://github.com/bodymovin/bodymovin)
+
+Thanks to Hernan Torrisi for the amazing work on the bodymovin plugin and to Michal Hotovec for the loading animation I'm using on the demo.
 
 ## Contact
 [@72mena](http://twitter.com/72mena)
