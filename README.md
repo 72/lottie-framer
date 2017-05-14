@@ -1,9 +1,9 @@
 # Bodymovin for Framer
 A Framer module to render JSON files exported with the Bodymovin plugin from After Effects.
 
-> *Bodymoving created by Hernan Torrisi and also used by AirBnb's Lottie library.*
+> *Bodymovin created by Hernan Torrisi and also used by AirBnb's Lottie library.*
 
-## [View Demo](https://framer.cloud/YwOqV/)
+# [View Demo](https://framer.cloud/YwOqV/)
 
 ## Installation
 
@@ -110,8 +110,9 @@ Download bodymovin-ready animations.
 
 Learn more about Bodymovin.
 - [Bodymovin official repo](https://github.com/bodymovin/bodymovin)
+- [Bodymovin installation guide by Valentina Berois](https://medium.com/@vberois/lottie-after-effects-591913cb004c)
 
-Thanks to Hernan Torrisi for the amazing work on the bodymovin plugin and to Michal Hotovec for the loading animation I'm using on the demo.
+Thanks to Hernan Torrisi for the amazing work on the bodymovin plugin and to @mhotovec, @slykuiper and @MVHarvey for their animations used in the demo.
 
 ## Contact
 [@72mena](http://twitter.com/72mena)
