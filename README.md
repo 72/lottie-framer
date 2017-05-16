@@ -8,11 +8,8 @@ A Framer module to render JSON files exported with the Bodymovin plugin from Aft
 ## Installation
 
 1. Create a new Framer project.
-2. Download the [bodymovin plugin](https://raw.githubusercontent.com/bodymovin/bodymovin/master/build/player/bodymovin.min.js) and add it to your project and index.html
-```html
-<script src="js/bodymovin.min.js" type="text/javascript"></script>
-```
-3. Put the file `BodymovinLayer.coffee` in your modules folder.
+2. Download and put the file [`BodymovinLayer.coffee`](https://raw.githubusercontent.com/72/bodymovin-for-Framer/master/BodymovinLayer.coffee) in your modules folder.
+3. *Recommended:* Download the [`bodymovin.min.js`](https://raw.githubusercontent.com/bodymovin/bodymovin/master/build/player/bodymovin.min.js) library and put it in your modules folder.
 4. Add this line at the top of your Framer document.
 ```coffeescript
 {BodymovinLayer} = require 'BodymovinLayer'

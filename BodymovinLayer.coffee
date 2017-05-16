@@ -5,6 +5,32 @@ Implementation of Hernan Torrisi's "Bodymovin" plugin, for Framer.
 by @72mena
 ###
 
+# INCLUDE LIBRARY ———————————————————————————
+insertScript = (localScript, webScript, name = 'JavaScript Library') ->
+	try
+		lib = Utils.domLoadDataSync localScript
+		console.log "%c#{name} Successfully Included Locally", "background: #DDFFE3; color: #007814"
+	catch e
+		try
+			lib = Utils.domLoadDataSync webScript
+			console.log "%c#{name} Successfully Included from Web", "background: #DDFFE3; color: #007814"
+		catch e
+			throw Error("Sorry, I couldn't load #{name}")
+
+
+	script = document.createElement "script"
+	script.type = "text/javascript"
+	script.innerHTML = lib
+
+	head = document.getElementsByTagName("head")[0]
+	head.appendChild script
+
+	script
+
+insertScript("modules/bodymovin.min.js", "https://raw.githubusercontent.com/bodymovin/bodymovin/master/build/player/bodymovin.min.js", "Bodymovin Library")
+
+
+# BODYMOVIN LAYER ———————————————————————————
 class exports.BodymovinLayer extends Layer
 
 	@define "speed",
