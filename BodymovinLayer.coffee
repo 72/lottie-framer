@@ -110,6 +110,15 @@ class exports.BodymovinLayer extends Layer
 		@_animationLayer.stop()
 	pause: () ->
 		@_animationLayer.pause()
+	goToAndPlay: (value, isFrame) ->
+		isFrame ?= true
+		@_animationLayer.goToAndPlay(value, isFrame)
+	goToAndStop: (value, isFrame) ->
+		isFrame ?= true
+		@_animationLayer.goToAndStop(value, isFrame)
+	playSegments: (segments, forceFlag) ->
+		forceFlag ?= true
+		@_animationLayer.playSegments(segments, forceFlag)
 	setSpeed: (speed) ->
 		speed ?= @speed
 		@_animationLayer.setSpeed(speed)

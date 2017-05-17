@@ -49,9 +49,19 @@ customAnim = new BodymovinLayer
 
 ### Methods
 
-- `customAnim.play()`
-- `customAnim.pause()`
-- `customAnim.stop()`
+**.play()**
+
+**.pause()**
+
+**.stop()**
+
+Bodymovin requires the animation to be loaded before running these 3 methods:
+
+**.goToAndStop( _frame_ )**
+
+**.goToAndPlay( _frame_ )**
+
+**.playSegments([ _fromFrame_, _toFrame_ ])**
 
 
 ### Events
@@ -96,11 +106,6 @@ customAnim.onTap ->
 
 
 ## Notes
-
-For some reason these bodymovin methods are not working for me. I'll update the module if I find a fix.
-- `.goToAndStop()`
-- `.goToAndPlay()`
-- `.playSegments()`
 
 Download bodymovin-ready animations.
 - [Lottie Files](http://www.lottiefiles.com/)
