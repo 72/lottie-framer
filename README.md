@@ -66,7 +66,13 @@ Bodymovin requires the animation to be loaded before running these 3 methods:
 
 ### Events
 
-Examples of available custom events:
+Examples of available events:
+
+```coffeescript
+customAnim.onComplete ->
+	print 'Completed.'
+	#Do something else
+```
 
 ```coffeescript
 customAnim.on "change:speed", ->
@@ -80,7 +86,8 @@ customAnim.on "change:direction", ->
 	#Do something else
 ```
 
-### [Basic Demo](https://framer.cloud/GPSqX/)
+
+# [View Basic Demo](https://framer.cloud/GPSqX/)
 
 Plays an animation, and changes its direction on Tap.
 

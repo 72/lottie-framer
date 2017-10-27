@@ -125,3 +125,8 @@ class exports.BodymovinLayer extends Layer
 	setDirection: (direction) ->
 		direction ?= @direction
 		@_animationLayer.setDirection(direction)
+	onComplete: (callback) ->
+		if @loop
+			@_animationLayer.addEventListener "loopComplete", callback
+		else
+			@_animationLayer.addEventListener "complete", callback
