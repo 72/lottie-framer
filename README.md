@@ -1,18 +1,17 @@
-# Bodymovin for Framer
-A Framer module to render JSON files exported with the Bodymovin plugin from After Effects.
+# Lottie for Framer
+A Framer module that uses AirBnb's Lottie-Web to render animations exported from After Effects (JSON files).
 
-> *Bodymovin created by Hernan Torrisi and also used by AirBnb's Lottie library.*
 
-# [View Demo](https://framer.cloud/YwOqV/)
+# 🚀 [View Demo](https://framer.cloud/YwOqV/)
 
 ## Installation
 
 1. Create a new Framer project.
-2. Download and put the file [`BodymovinLayer.coffee`](https://raw.githubusercontent.com/72/bodymovin-for-Framer/master/BodymovinLayer.coffee) in your modules folder.
-3. *Recommended:* Download the [`bodymovin.min.js`](https://raw.githubusercontent.com/bodymovin/bodymovin/master/build/player/bodymovin.min.js) library and put it in your modules folder.
+2. Download and put the file [`LottieLayer.coffee`](https://raw.githubusercontent.com/72/bodymovin-for-Framer/master/BodymovinLayer.coffee) in your modules folder.
+3. *Recommended:* Download the [`lottie.min.js`](https://raw.githubusercontent.com/bodymovin/bodymovin/master/build/player/bodymovin.min.js) library and put it in your modules folder.
 4. Add this line at the top of your Framer document.
 ```coffeescript
-{BodymovinLayer} = require 'BodymovinLayer'
+{LottieLayer} = require 'LottieLayer'
 ```
 
 
@@ -20,17 +19,17 @@ A Framer module to render JSON files exported with the Bodymovin plugin from Aft
 
 Create a new instance of this module.
 ```coffeescript
-customAnim = new BodymovinLayer
+customAnim = new LottieLayer
 	name: "customAnim"
 	path: "images/animation.json"
 ```
-That's it! This creates an element bundled with all the goodies of a Framer Layer **and** the methods of a bodymovin animation instance.
+That's it! This creates an element bundled with all the goodies of a Framer Layer **and** the methods of a lottie-web animation instance.
 
 
 ### Customization
 
 ```coffeescript
-customAnim = new BodymovinLayer
+customAnim = new LottieLayer
 	name: "customAnim"
 	path: "images/animation.json"
 	autoplay: true
@@ -55,7 +54,7 @@ customAnim = new BodymovinLayer
 
 **.stop()**
 
-Bodymovin requires the animation to be loaded before running these 3 methods:
+The animation needs to be loaded in the DOM before running these 3 methods:
 
 **.goToAndStop( _frame_ )**
 
@@ -86,39 +85,13 @@ customAnim.on "change:direction", ->
 	#Do something else
 ```
 
-
-# [View Basic Demo](https://framer.cloud/GPSqX/)
-
-Plays an animation, and changes its direction on Tap.
-
-#### Demo Code
-
-```coffeescript
-{BodymovinLayer} = require 'BodymovinLayer'
-
-customAnim = new BodymovinLayer
-	name: "customAnim"
-	path: "images/loading.json"
-	size: 500
-
-customAnim.center()
-
-# On tap, change direction of animation.
-customAnim.onTap ->
-	if customAnim.direction isnt 1
-		customAnim.direction = 1
-	else
-		customAnim.direction = -1
-```
-
-
 ## Notes
 
-Download bodymovin-ready animations.
+Download lottie-web-ready animations.
 - [Lottie Files](http://www.lottiefiles.com/)
 
-Learn more about Bodymovin.
-- [Bodymovin official repo](https://github.com/bodymovin/bodymovin)
+Learn more about Bodymovin & Lottie-Web.
+- [Lottie-web official repo](https://github.com/airbnb/lottie-web)
 - [Bodymovin installation guide by Valentina Berois](https://medium.com/@vberois/lottie-after-effects-591913cb004c)
 
 Thanks to Hernan Torrisi for the amazing work on the bodymovin plugin and to @mhotovec, @slykuiper and @MVHarvey for their animations used in the demo.

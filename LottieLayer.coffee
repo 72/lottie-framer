@@ -1,7 +1,7 @@
 ###
-BodymovinLayer
+LottieLayer
 -
-Implementation of Hernan Torrisi's "Bodymovin" plugin, for Framer.
+Implementation of Hernan Torrisi & AirBnb "Lottie-Web" for Framer.
 by @72mena
 ###
 
@@ -27,11 +27,11 @@ insertScript = (localScript, webScript, name = 'JavaScript Library') ->
 
 	script
 
-insertScript("modules/bodymovin.min.js", "https://raw.githubusercontent.com/bodymovin/bodymovin/master/build/player/bodymovin.min.js", "Bodymovin Library")
+insertScript("modules/lottie.min.js", "https://raw.githubusercontent.com/airbnb/lottie-web/master/build/player/lottie.min.js", "lottie-web")
 
 
-# BODYMOVIN LAYER ———————————————————————————
-class exports.BodymovinLayer extends Layer
+# LOTTIE LAYER ———————————————————————————
+class exports.LottieLayer extends Layer
 
 	@define "speed",
 		get: -> @_properties["speed"]
@@ -68,9 +68,9 @@ class exports.BodymovinLayer extends Layer
 		super @options
 
 		if @options.path is null
-			print "From BodymovinLayer: Setting a path to your json file is required."
+			print "From LottieLayer: Setting a path to your json file is required."
 		if @name is ""
-			print "From BodymovinLayer: The 'name' attribute is required."
+			print "From LottieLayer: The 'name' attribute is required."
 
 		#Shortcuts
 		@autoplay = @options.autoplay
@@ -93,14 +93,14 @@ class exports.BodymovinLayer extends Layer
 		_container = document.getElementById(@name)
 		_container.innerHTML = ""
 
-		bodymovinSettings =
+		lottieSettings =
 			container: _container,
 			path: @path,
 			renderer: @renderer,
 			autoplay: @autoplay,
 			loop: @loop
 
-		@_animationLayer = bodymovin.loadAnimation(bodymovinSettings);
+		@_animationLayer = lottie.loadAnimation(lottieSettings);
 		@setSpeed()
 		@setDirection()
 
