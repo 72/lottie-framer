@@ -2,13 +2,13 @@
 A Framer module that uses AirBnb's Lottie-Web to render animations exported from After Effects (JSON files).
 
 
-# 🚀 [View Demo](https://framer.cloud/YwOqV/)
+# 🚀 [View Demo](https://framer.cloud/lZjXF/)
 
 ## Installation
 
 1. Create a new Framer project.
-2. Download and put the file [`LottieLayer.coffee`](https://raw.githubusercontent.com/72/bodymovin-for-Framer/master/BodymovinLayer.coffee) in your modules folder.
-3. *Recommended:* Download the [`lottie.min.js`](https://raw.githubusercontent.com/bodymovin/bodymovin/master/build/player/bodymovin.min.js) library and put it in your modules folder.
+2. Download and put the file [`LottieLayer.coffee`](https://raw.githubusercontent.com/72/lottie-framer/master/LottieLayer.coffee) in your modules folder.
+3. *Recommended:* Download the [`lottie.min.js`](https://raw.githubusercontent.com/airbnb/lottie-web/master/build/player/lottie.min.js) library and put it in your modules folder.
 4. Add this line at the top of your Framer document.
 ```coffeescript
 {LottieLayer} = require 'LottieLayer'
