@@ -68,6 +68,12 @@ The animation needs to be loaded in the DOM before running these 3 methods:
 Examples of available events:
 
 ```coffeescript
+customAnim.onLoaded ->
+	print 'Loaded in the DOM'
+	#Do something else
+```
+
+```coffeescript
 customAnim.onComplete ->
 	print 'Completed.'
 	#Do something else

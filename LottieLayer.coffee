@@ -125,6 +125,9 @@ class exports.LottieLayer extends Layer
 	setDirection: (direction) ->
 		direction ?= @direction
 		@_animationLayer.setDirection(direction)
+	onLoaded: (callback) ->
+		if @built
+			@_animationLayer.addEventListener "loaded", callback
 	onComplete: (callback) ->
 		if @loop
 			@_animationLayer.addEventListener "loopComplete", callback
