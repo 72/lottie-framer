@@ -71,6 +71,7 @@ Examples of available events:
 customAnim.onLoaded ->
 	print 'Loaded in the DOM'
 	#Do something else
+```
 
 ```coffeescript
 customAnim.onComplete ->
